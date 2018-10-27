@@ -3,7 +3,7 @@ require 'pry'
 class Dog
   attr_accessor :id, :name, :breed 
 
-def initialize(id:nil, name:, breed:)
+def initialize(id:nil, name:nil, breed:nil)
   @id = id
   @name = name
   @breed = breed
@@ -64,7 +64,7 @@ def update
     DB[:conn].execute(sql, self.name, self.breed, self.id)
 end
 
-def self.create(name:, breed:)
+def self.create(name, breed)
   new_dog = Dog.new(name, breed)
   new_dog.save
   new_dog
