@@ -64,8 +64,8 @@ def update
     DB[:conn].execute(sql, self.name, self.breed, self.id)
 end
 
-def self.create(name:,breed:)
-  new_dog = Dog.new(name:,breed:)
+def self.create(name,breed)
+  new_dog = Dog.new(name,breed)
   new_dog.save
   new_dog
 end 
