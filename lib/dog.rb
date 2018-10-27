@@ -65,7 +65,8 @@ def update
 end
 
 def self.create(name:, breed:)
-  new_dog = Dog.new
+  new_dog = Dog.new(name, breed)
+  
 
   
 end 
